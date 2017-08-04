@@ -52,7 +52,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
 html {
-	font-family: sans-serif;
+	font-family: "Source Sans Pro";
 	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -72,7 +72,7 @@ section {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 3em;
 	margin: 0.67em 0;
 }
 
@@ -92,6 +92,7 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
+	color: #fff;
 }
 
 pre {
@@ -172,6 +173,8 @@ audio:not([controls]) {
 
 img {
 	border-style: none;
+	max-width: 100%;
+	height: auto;
 }
 
 svg:not(:root) {
@@ -183,10 +186,18 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: sans-serif;
+	font-family: "Source Sans Pro";
 	font-size: 100%;
 	line-height: 1.15;
 	margin: 0;
+}
+
+button {
+	font-size: 15px !important;
+	font-family: "Source Sans Pro" !important;
+	letter-spacing: .2em !important; 
+	width: 190px !important;
+
 }
 
 button,
@@ -409,6 +420,7 @@ template {
 
 /*--------------------------------------------------------------
 5.0 Typography
+
 --------------------------------------------------------------*/
 
 body,
@@ -417,7 +429,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Source Sans Pro"; /*"Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif*/
 	font-size: 15px;
 	font-size: 0.9375rem;
 	font-weight: 400;
@@ -433,7 +445,7 @@ h6 {
 	clear: both;
 	line-height: 1.4;
 	margin: 0 0 0.75em;
-	padding: 1.5em 0 0;
+	/*padding: 1.5em 0 0; */
 }
 
 h1:first-child,
@@ -995,13 +1007,13 @@ input[type="checkbox"] + label {
 button,
 input[type="button"],
 input[type="submit"] {
-	background-color: #222;
+	background-color: #fff; 
 	border: 0;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #fff;
+	color: #000;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
@@ -1310,7 +1322,7 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
-	background: #fff;
+	background: #f0f4f4;
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
 	font-size: 16px;
@@ -1531,6 +1543,7 @@ body {
 	max-width: 700px;
 	padding-left: 2em;
 	padding-right: 2em;
+    
 }
 
 .wrap:after {
@@ -1548,7 +1561,7 @@ body {
 }
 
 .site-header {
-	background-color: #fafafa;
+	background-color: #f0f4f4;
 	position: relative;
 }
 
@@ -1810,12 +1823,12 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 .panel-content {
-	position: relative;
+	position: relative; 
 }
 
 .panel-content .wrap {
-	padding-bottom: 0.5em;
-	padding-top: 1.75em;
+ /* padding-bottom: 0.5em;
+	padding-top: 1.75em; */
 }
 
 /* Panel edit link */
@@ -1830,6 +1843,10 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	font-size: 0.875rem;
 }
 
+.entry-header {
+	visibility: hidden !important;
+}
+
 /* Front Page - Recent Posts */
 
 .twentyseventeen-front-page .panel-content .recent-posts article {
@@ -1838,14 +1855,14 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	margin-bottom: 3em;
 }
 
-.recent-posts .entry-header {
+.recent-posts  { /*removed .entry-header  */
 	margin-bottom: 1.2em;
 }
 
 .page .panel-content .recent-posts .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
-	font-weight: 300;
+	font-size: 18px;
+	/*font-size: 1.25rem;*/
+	font-weight: 400;
 	letter-spacing: 0;
 	text-transform: none;
 }
@@ -1863,14 +1880,14 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 --------------------------------------------------------------*/
 
 .site-content-contain {
-	background-color: #fff;
+	background-color: #f0f4f4;
 	position: relative;
 }
-
+/*
 .site-content {
 	padding: 2.5em 0 0;
 }
-
+*/
 /*--------------------------------------------------------------
 13.4 Posts
 --------------------------------------------------------------*/
@@ -1904,11 +1921,12 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
-
+/*
 .entry-header .entry-title {
 	margin-bottom: 0.25em;
+	visibility: hidden;
 }
-
+*/
 .entry-title a {
 	color: #333;
 	text-decoration: none;
@@ -2033,7 +2051,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	padding-bottom: 2em;
 }
 
-body:not(.twentyseventeen-front-page) .entry-header {
+body:not(.twentyseventeen-front-page)  { /*.entry-header*/
 	padding: 1em 0;
 }
 
@@ -2044,7 +2062,7 @@ body:not(.twentyseventeen-front-page) #comments {
 	margin-right: auto;
 }
 
-body:not(.twentyseventeen-front-page) .entry-header {
+body:not(.twentyseventeen-front-page) { /*.entry-header*/
 	padding-top: 0;
 }
 
@@ -2084,7 +2102,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .archive.page-one-column:not(.has-sidebar) #primary {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 740px;
+	max-width: 1135px;
 }
 
 .single-featured-image-header {
@@ -3187,7 +3205,7 @@ object {
 
 	h1 {
 		font-size: 30px;
-		font-size: 1.875rem;
+		font-size: 3.2rem; /*1.875rem */
 	}
 
 	h2,
@@ -3243,16 +3261,19 @@ object {
 	/* Front Page */
 
 	.panel-content .wrap {
-		padding-bottom: 2em;
-		padding-top: 3.5em;
+		/* padding-bottom: 2em;
+		padding-top: 3.5em; */
 	}
 
+/* -- Fix Society Edit - Justin Cyphers
 	.page-one-column .panel-content .wrap {
-		max-width: 740px;
+		max-width: 1135px;
 	}
 
-	.panel-content .entry-header {
-		margin-bottom: 4.5em;
+*/
+
+	.panel-content {  /*.entry-header
+		margin-bottom: 4.5em;*/
 	}
 
 	.panel-content .recent-posts .entry-header {
@@ -3310,8 +3331,8 @@ object {
 	input,
 	select,
 	textarea {
-		font-size: 16px;
-		font-size: 1rem;
+		/*font-size: 16px;*/
+		font-size: 18px; /*was 1rem */
 		line-height: 1.5;
 	}
 
@@ -3324,7 +3345,7 @@ object {
 	/* Layout */
 
 	.wrap {
-		max-width: 1000px;
+		max-width: 1135px;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
@@ -3698,8 +3719,8 @@ object {
 	}
 
 	.panel-content .wrap {
-		padding-bottom: 4.5em;
-		padding-top: 6em;
+		/* padding-bottom: 4.5em;
+		 padding-top: 6em; */
 	}
 
 	.panel-image {
@@ -3719,7 +3740,7 @@ object {
 
 	.page-two-column .panel-content .entry-content {
 		float: right;
-		width: 58%;
+		width: 85%;
 	}
 
 	/* Front Page - Recent Posts */
@@ -3752,11 +3773,11 @@ object {
 	}
 
 	/* Posts */
-
+/*
 	.site-content {
 		padding: 5.5em 0 0;
 	}
-
+*/
 	.single-post .entry-title,
 	.page .entry-title {
 		font-size: 26px;
@@ -3797,8 +3818,8 @@ object {
 	body.has-sidebar.error404 #primary .page-header,
 	body.page-two-column:not(.archive) #primary .entry-header,
 	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
-		float: left;
-		width: 36%;
+		float: right;  /*left; */
+		width: 20%;    /*36%; */
 	}
 
 	.blog:not(.has-sidebar) #primary article,
@@ -3912,7 +3933,7 @@ object {
 	.page.page-one-column .entry-header,
 	.twentyseventeen-front-page.page-one-column .entry-header,
 	.archive.page-one-column:not(.has-sidebar) .page-header {
-		margin-bottom: 4em;
+		/* margin-bottom: 4em; */
 	}
 
 	.page:not(.home) #content {
@@ -4197,7 +4218,7 @@ object {
 	.wrap {
 		padding-left: 5% !important;
 		padding-right: 5% !important;
-		max-width: none;
+		max-width: 90%;
 	}
 
 	/* Site Branding */
@@ -4275,6 +4296,31 @@ object {
 		font-size: 11pt;
 		width: 34%;
 	}
+
+	.introTxt {
+		font-size: 64pt;
+ 	}
+
+	.viewClass {
+		background-color: #fff;
+	}
+
+	body:not(.has-sidebar):not(.page-one-column) .page-header,
+	body.has-sidebar.error404 #primary .page-header,
+	body.page-two-column:not(.archive) #primary .entry-header,
+	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+		float: right;
+		width: 20%;
+	}
+
+	 .page-title {
+    	Display: none !important;
+	} 
+
+
+	
+
+	
 
 	.site-footer {
 		padding: 0;
