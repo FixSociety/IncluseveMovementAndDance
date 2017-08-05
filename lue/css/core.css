@@ -1,0 +1,55 @@
+/** 
+This is places the posts in center positioning relative to the header 
+(which pushed the post content to the right of the page) 
+**/
+
+body:not(.has-sidebar):not(.page-one-column) .page-header, 
+body.has-sidebar.error404 #primary .page-header, 
+body.page-two-column:not(.archive) #primary .entry-header, 
+body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
+  float: right;
+  width: 20%;
+}
+
+/** 
+Removes Page title from displaying 
+**/
+h1.page-title {
+  display: none;
+}
+
+
+/** 
+Trying to hide mobile version of classes 
+mobileClassView corresponds to each class (title/time/register-<table>) 
+and 
+(descriptions-<p>) for mobile view
+**/
+.mobileView {
+  display: none;
+}
+
+/**
+regView corresponds to the full page browser view of each classes <table> data  
+**/
+.regView {
+    display: block;
+}
+
+
+/* Trying to display mobile version of class page and hide reg version */
+@media screen and (max-width: 480px) {
+   body, 
+   .mobileView {
+        background-color: lightgreen;
+        display: block;
+   }
+
+   .regView {
+        display: none;
+   }
+
+   .site-title {
+        font-size: .75rem;
+   }
+}
